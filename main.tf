@@ -13,6 +13,13 @@ terraform {
     }
   }
   required_version = ">= 1.1.0"
+
+backend "remote" {
+    organization = "jcarosCompany"
+
+    workspaces {
+      name = "terra-api"
+    }
 }
 
 provider "aws" {
